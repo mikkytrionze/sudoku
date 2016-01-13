@@ -1,0 +1,31 @@
+<ion-view view-title="Sudoku" class="bar-calm">
+	<ion-nav-buttons side="primary">
+		<div ng-if="paused==true">
+			<button class="icon ion-play button-clear button" ng-click="continueGame()" side="primary"></button>	
+		</div>
+		<div ng-if="paused==false">
+			<button class="icon ion-pause button-clear button"  ng-click="pauseGame()" side="primary"></button>
+		</div>
+		
+		<button class="icon ion-checkmark button-clear button" ng-click="submitGame()"> </button>
+	</ion-nav-buttons>	
+	
+	<ion-nav-buttons side="secondary">
+		<span id="timer">00:00</span> 
+	</ion-nav-buttons>
+	
+	<ion-content class="" >
+		<div class="container-full">
+			<div class="row">
+				<div class="col three tablet-full mobile-full">
+					<!-- [indianred-theme : darkred] [palevioletred-theme : bloodred] [steelblue-theme: blue] [teal-theme : green] -->
+					<div id="game_div" class="sudoku-wrapper steelblue-theme"  >
+						<div class="sudoku-container">
+							<table id="tb"></table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
